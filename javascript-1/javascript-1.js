@@ -270,11 +270,20 @@ const fido = new Dog('Fido', 3, 'Jack Russell', ['sit','shake']);
 */
 
 //CODE HERE
-Dog.prototype.bark = function(){
-    return `${this.name} says bark`
-}
+// Dog.prototype.bark = function(){
+//     return `${this.name} says bark`
+// }
+
+// Dog.bark.call(fido, fidoSpeak)
 
 
+// const dog = {
+// function bark(){
+//     return `${this.name} says bark`
+// }
+// // }
+
+// Dog.bark.call(fidoSpeak, 'fido')
 
 /*
     Invoke the call method on bark, passing in fido as the context
@@ -331,6 +340,13 @@ Dog.prototype.bark = function(){
 */
 
 //CODE HERE
+function Phone(brand, model, storage, color, sold){
+    this.brand = brand
+    this.model = model 
+    this.storage = storage
+    this.color = color 
+    this.sold = sold
+}
 
   
 /*
@@ -345,11 +361,11 @@ Dog.prototype.bark = function(){
 */
 
 //CODE HERE
-  // let phone1 = 
+  let phone1 = new Phone('apple', 'x', 0, 'blue', false)
   
-  // let phone2 = 
+  let phone2 = new Phone('apple', 'x', 0, 'green', false)
   
-  // let phone3 = 
+  let phone3 = new Phone('apple', 'x', 0, 'orange', false)
   
 /*
     Last, add a prototype method to Phone.
@@ -360,5 +376,9 @@ Dog.prototype.bark = function(){
 */
 
 //CODE HERE
+Phone.prototype.sell = function(sold){
+    this.sold = true
+    return `${this.brand} ${this.model} has been sold.`
+}
 
   
