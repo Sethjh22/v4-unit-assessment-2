@@ -1,3 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 150vh;
+    width: 100%;
+    display: flex;
+}
+header{
+    background-color: rgb(37, 37, 37);
+    height: 10vh;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+    display: flex;
+    align-items:  center;
+
+}
+h1{
+    color: rgb(42, 171, 226);
+    font-family: 'Nunito', sans-serif;
+    font-size: 4vh;
+    position: relative;
+    left: 2%;
+    display: flex;
+    
+}
+.buttonBox{
+    width: 40%;
+    position: absolute;
+    right: 0px;
+    display: flex;
+    justify-content: space-around;
+}
+.headButtons{
+    background-color: rgb(37, 37, 37);
+    font-family: 'Nunito', sans-serif;
+    border: none;
+    color: white;
+}
+main{
+    margin-top: 10vh;
+    height: 132vh;
+    width: 100%;
+    position: relative;
+    /* display: flex; */
+}
+article{
+    position: relative;
+    display: flex;
+}
+.profile{
+    height: 20vh;
+}
+
+footer{
+    height: 8vh;
+    width: 100%;
+    background-color: rgb(42, 171, 226);
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+}
+.footerWords{
+position: relative;
+left: 2%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* 
 
 these are the colors used in the example
