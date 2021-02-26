@@ -9,6 +9,7 @@
 */
 
 //CODE HERE
+const myArr = [4, 'abc', ['cat','dog', 'bird'], 77]
 
 
 ////////////////////PROBLEM 2////////////////////
@@ -21,6 +22,7 @@
 const nestedLetters = ['m', 'g', 'e', 'q', 'h', ['n', 'b', ['v', 'z', 'y', 'r']], 'a']
 
 //CODE HERE
+let foundZ = nestedLetters[5][2][1]
 
 
 ////////////////////PROBLEM 3////////////////////
@@ -37,6 +39,8 @@ const desert = ['rattlesnake', 'coyote']
 //DO NOT EDIT CODE ABOVE
 
 //CODE HERE
+const animals = [...forest, ...ocean, ...savannah, ...desert]
+
 
 
 /*
@@ -45,6 +49,8 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
+const animalsCopy = [...animals]
+animalsCopy.push('elephant')
 
 
 ////////////////////PROBLEM 4////////////////////
@@ -56,7 +62,15 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
-
+let compareNums = (num1, num2) =>{
+    if(num1 > num2){
+        return num1
+    }else if(num2 > num1){
+        return num2
+    }else{
+        return num1
+    }
+}
   
 ////////////////////PROBLEM 5////////////////////
 /*
@@ -68,6 +82,7 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
+let bestMovie = movie => `${movie} is the best movie ever!`
   
   
 ////////////////////PROBLEM 6////////////////////
@@ -76,6 +91,7 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
+let jsNinja = () => 'I am a JavaScript ninja!'
   
 
 ////////////////////PROBLEM 7////////////////////
@@ -97,6 +113,7 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
+delete gameInfo.rating
   
 
 ////////////////////PROBLEM 8////////////////////
@@ -119,7 +136,18 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
+let evenOnly = (obj) => {
+    for(let key in obj){
+        if(obj[key] % 2 !== 0){
+            delete obj[key]
+        }else{
+            return obj
+        }
+    }
+    return obj
+}
   
+evenOnly(shapes)
   
 ////////////////////PROBLEM 9////////////////////
 
@@ -161,7 +189,18 @@ const classes = [
 */
 
 //CODE HERE
+// let easyClasses = (arr) => {
+//     for(let i = 0; i < classes.length; i++){
+//         for(let key in arr[i]){
+//             if(arr[i][key] === true){
+//                 arr[i][key] = false
+//             }
+//         }
 
+//     }
+//     return obj
+// }
+// easyClasses(classes)
   
 ////////////////////PROBLEM 10////////////////////
 /*
@@ -177,8 +216,18 @@ let pairsArray = []
 //DO NOT EDIT CODE ABOVE
 
 //CODE HERE
-
+let pairing = (arr) => {
+    for(let i=0; i<arr.length; i++){
+        for(let j=1; j < arr.length; j++){
+            if(arr[i] === arr[j]){
+                pairsArray.push([i, j])
+            }
+        }
+    }
     
+}
+
+pairing(lettersToPair)  
 
 //////////////////////////////////PROBLEMS 11-14//////////////////////////////////
 /*
@@ -194,7 +243,14 @@ let pairsArray = []
 */
 
 //CODE HERE
+function Dog(name, age, breed, tricks){
+    this.name = name
+    this.age = age 
+    this.breed = breed 
+    this.tricks = tricks
+}
 
+// let fido = new Dog('Fido', 3, 'Jack Russell', ['sit','shake'])
 
 /*
     Invoke your dog constructor passing in 'Fido' for the name, 3 for the age, 
@@ -203,6 +259,7 @@ let pairsArray = []
 */
 
 //CODE HERE
+const fido = new Dog('Fido', 3, 'Jack Russell', ['sit','shake']);
   
 
 ////////////////////PROBLEM 12////////////////////
@@ -213,6 +270,10 @@ let pairsArray = []
 */
 
 //CODE HERE
+Dog.prototype.bark = function(){
+    return `${this.name} says bark`
+}
+
 
 
 /*
