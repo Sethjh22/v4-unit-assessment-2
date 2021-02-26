@@ -189,18 +189,28 @@ const classes = [
 */
 
 //CODE HERE
-// let easyClasses = (arr) => {
-//     for(let i = 0; i < classes.length; i++){
-//         for(let key in arr[i]){
-//             if(arr[i][key] === true){
-//                 arr[i][key] = false
-//             }
-//         }
+//   let easyClasses = () => {
+//       for(let i=0; i<) 
+//   }
 
-//     }
-//     return obj
-// }
-// easyClasses(classes)
+
+
+
+
+
+
+let easyClasses = (arr) => {
+    for(let i = 0; i < arr.length; i++){
+        for(let key in arr[i]){
+            if(arr[i][key] === true){
+                arr[i][key] = false
+            }
+        }
+
+    }
+    return arr
+}
+easyClasses(classes)
   
 ////////////////////PROBLEM 10////////////////////
 /*
@@ -218,7 +228,7 @@ let pairsArray = []
 //CODE HERE
 let pairing = (arr) => {
     for(let i=0; i<arr.length; i++){
-        for(let j=1; j < arr.length; j++){
+        for(let j = (arr.length - 1); j > i; j--){
             if(arr[i] === arr[j]){
                 pairsArray.push([i, j])
             }
@@ -270,21 +280,14 @@ const fido = new Dog('Fido', 3, 'Jack Russell', ['sit','shake']);
 */
 
 //CODE HERE
-// Dog.prototype.bark = function(){
-//     return `${this.name} says bark`
-// }
-
-// Dog.bark.call(fido, fidoSpeak)
-
-
-// const dog = {
 // function bark(){
-//     return `${this.name} says bark`
+//     const reply = [this.name, 'says bark']
 // }
-// // }
+// const fiboSpeak = {
+//     name: fibo
+// }
 
-// Dog.bark.call(fidoSpeak, 'fido')
-
+// bark.call(fiboSpeak)
 /*
     Invoke the call method on bark, passing in fido as the context
     and saving the result to a variable called fidoSpeak.
